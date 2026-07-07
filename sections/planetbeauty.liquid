@@ -1,0 +1,127 @@
+<style>
+  .header-container {
+    width: 1448px;
+    max-width: 100%;
+    height: 70px;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0 55px;
+    box-sizing: border-box;
+  }
+
+  .header-logo {
+    width: 191px;
+    height: 26px;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+  }
+
+  .header-logo img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+
+  .header-nav {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    height: 32px;
+  }
+
+  .header-nav a {
+    color: #121212;
+    font-family: sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .header-actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    width: 266px;
+    height: 38px;
+    justify-content: flex-end;
+    flex-shrink: 0;
+  }
+
+  .search-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 180px;
+  }
+
+  .search-input {
+    border: none;
+    border-bottom: 1px solid #121212;
+    font-size: 14px;
+    padding: 4px 0;
+    width: 100%;
+    outline: none;
+    background: transparent;
+  }
+
+  .icon-btn {
+    font-size: 20px;
+    text-decoration: none;
+    color: #121212;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+</style>
+
+<div class="header-container">
+ <div class="header-logo">
+    <img src="{{ 'Planet.png' | asset_url }}" alt="Planet Beauty Logo">
+  </div>
+
+  <nav class="header-nav">
+    <a href="#">Shop ▾</a>
+    <a href="#">Best Sellers</a>
+    <a href="#">Skincare ▾</a>
+    <a href="#">Makeup ▾</a>
+    <a href="#">Hair ▾</a>
+    <a href="#">Brands ▾</a>
+    <a href="#">Sale ▾</a>
+  </nav>
+
+  <div class="header-actions">
+    <div class="search-wrapper">
+      <input type="text" class="search-input" placeholder="What can we help you find?">
+    </div>
+    <span class="icon-btn">👤</span>
+    <span class="icon-btn">👜</span>
+  </div>
+
+</div>
+
+{% schema %}
+{
+  "name": "Main Header Bar",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "logo_image",
+      "label": "Logo Image"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Main Header Bar"
+    }
+  ]
+}
+{% endschema %}
