@@ -9,11 +9,9 @@
     margin: 0 auto;
     overflow: hidden;
   }
-
   marquee {
     width: 100%;
   }
-
   marquee span {
     color: #ffffff;
     font-family: sans-serif;
@@ -22,26 +20,22 @@
     letter-spacing: 1px;
     margin-right: 50px;
   }
-
   marquee .dot {
     font-size: 14px;
     margin-right: 50px;
   }
-
   @media (max-width: 768px) {
     .marquee-container {
       width: 440px;
       height: 39px;
       padding: 13px 50px;
       box-sizing: border-box;
-    }
-    
+    } 
     marquee span, marquee .dot {
       margin-right: 10px;
     }
   }
 </style>
-
 <div class="marquee-container">
   <marquee scrollamount="5" behavior="scroll" direction="left">
     <span>FREE SHIPPING ON ORDERS OVER $59</span>
