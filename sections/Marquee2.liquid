@@ -1,0 +1,76 @@
+<style>
+  .brand-marquee-section {
+    width: 1440px;
+    max-width: 100%;
+    height: 151px;
+    background-color: #ffffff;
+    margin: 0 auto;
+    padding-top: 29.06px; 
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+
+  .brand-marquee-track {
+    width: 1366px;
+    max-width: 100%;
+    height: 92.88px;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+
+  .brand-marquee-track marquee {
+    width: 100%;
+    height: 100%;
+  }
+
+  .brand-logo-img {
+    width: 257px;
+    height: 92px;
+    object-fit: contain;
+    margin-right: 20px;
+    vertical-align: middle;
+  }
+
+  @media (max-width: 768px) {
+    .brand-marquee-section {
+      width: 440px;
+      height: 100px;
+      padding-top: 19.5px;
+    }
+
+    .brand-marquee-track {
+      width: 926px;
+      height: 61px;
+    }
+
+    .brand-logo-img {
+      width: 169px;
+      height: 61px;
+      margin-right: 20px;
+    }
+  }
+</style>
+
+<div class="brand-marquee-section">
+  <div class="brand-marquee-track">
+    <marquee scrollamount="4" behavior="scroll" direction="left">
+      <img src="{{ 'ghd.png' | asset_url }}" class="brand-logo-img" alt="Brand Logo">
+      <img src="{{ 'dermalogica.png' | asset_url }}" class="brand-logo-img" alt="Brand Logo">
+      <img src="{{ 'bareminerals.png' | asset_url }}" class="brand-logo-img" alt="Brand Logo">
+      <img src="{{ 'caudalie.png' | asset_url }}" class="brand-logo-img" alt="Brand Logo">
+      <img src="{{ 'janeiredale.png' | asset_url }}" class="brand-logo-img" alt="Brand Logo">
+    </marquee>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Brand Marquee Bar",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Brand Marquee Bar"
+    }
+  ]
+}
+{% endschema %}
