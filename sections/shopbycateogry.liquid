@@ -1,0 +1,171 @@
+<style>
+  .shop-category-section {
+    width: 1440px;
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 60px 20px;
+    box-sizing: border-box;
+  }
+
+  .shop-category-title {
+    font-family: 'Fraunces', serif;
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 120%;
+    color: #EF0180;
+    margin: 0 auto 40px auto;
+    display: inline-block;
+    letter-spacing: 0%;
+  }
+
+  .category-container {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    width: 100%;
+  }
+
+  .category-card {
+    width: 275px;
+    height: 437px;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+
+  .category-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .fragrance-card img {
+    object-position: left center;
+  }
+
+  .category-text-box {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 24px;
+    box-sizing: border-box;
+    text-align: left;
+    z-index: 2;
+  }
+
+  .category-name {
+    font-family: 'Fraunces', serif;
+    font-size: 32px;
+    font-weight: 600;
+    color: #ffffff;
+    margin: 0 0 8px 0;
+  }
+
+  .category-desc {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    color: #ffffff;
+    margin: 0 0 20px 0;
+  }
+
+  .category-btn {
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-bottom: 1.5px solid #ffffff;
+    padding-bottom: 4px;
+    display: inline-block;
+  }
+
+  @media (max-width: 1024px) {
+    .category-container {
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+    
+    .category-card {
+      width: 45%;
+      height: 380px;
+      flex-shrink: 1;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .category-card {
+      width: 100%;
+      height: 400px;
+    }
+  }
+</style>
+
+<div class="shop-category-section">
+  <h2 class="shop-category-title">Shop by Category</h2>
+
+  <div class="category-container">
+    
+    <div class="category-card">
+      <img src="{{ 'category1.png' | asset_url }}">
+      <div class="category-text-box">
+        <h3 class="category-name">Skincare</h3>
+        <p class="category-desc">Serums, Moisturizers & More</p>
+        <a href="#" class="category-btn">SHOP NOW →</a>
+      </div>
+    </div>
+
+    <div class="category-card">
+      <img src="{{ 'category2.png' | asset_url }}">
+      <div class="category-text-box">
+        <h3 class="category-name">Makeup</h3>
+        <p class="category-desc">Foundation, Lips & Eyes</p>
+        <a href="#" class="category-btn">SHOP NOW →</a>
+      </div>
+    </div>
+
+    <div class="category-card fragrance-card">
+      <img src="{{ 'category3.png' | asset_url }}">
+      <div class="category-text-box">
+        <h3 class="category-name">Fragrance</h3>
+        <p class="category-desc">Perfumes & Body Mists</p>
+        <a href="#" class="category-btn">SHOP NOW →</a>
+      </div>
+    </div>
+
+    <div class="category-card">
+      <img src="{{ 'category4.png' | asset_url }}">
+      <div class="category-text-box">
+        <h3 class="category-name">Haircare</h3>
+        <p class="category-desc">Treatments & Styling</p>
+        <a href="#" class="category-btn">SHOP NOW →</a>
+      </div>
+    </div>
+
+    <div class="category-card">
+      <img src="{{ 'category5.png' | asset_url }}">
+      <div class="category-text-box">
+        <h3 class="category-name">Tools & Tech</h3>
+        <p class="category-desc">Professional-Grade Devices</p>
+        <a href="#" class="category-btn">SHOP NOW →</a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Shop By Category",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Shop By Category"
+    }
+  ]
+}
+{% endschema %}

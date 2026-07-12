@@ -1,0 +1,223 @@
+<style>
+  .best-sellers-section {
+    width: 1440px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 60px 48px;
+    box-sizing: border-box;
+    background-color: #ffffff;
+  }
+
+  .best-sellers-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    width: 100%;
+  }
+
+  .title-nav-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+  }
+
+  .best-sellers-title {
+    font-family: 'Fraunces', serif;
+    font-size: 36px;
+    font-weight: 600;
+    color: #000000;
+    margin: 0;
+  }
+
+  .best-sellers-tabs {
+    display: flex;
+    gap: 25px;
+  }
+
+  .tab-link {
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #777777;
+    text-decoration: none;
+    letter-spacing: 1px;
+  }
+
+  .tab-link.active {
+    color: #000000;
+  }
+
+  .view-all-link {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: #000000;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-bottom: 2px solid #000000;
+    padding-bottom: 2px;
+    white-space: nowrap;
+  }
+
+  .product-grid-container {
+    width: 1333px;
+    max-width: 100%;
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+  }
+
+  .product-card {
+    width: 205px;
+    flex-shrink: 0;
+    text-align: left;
+  }
+
+  .product-image-box {
+    width: 205px;
+    height: 270px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 15px;
+    background-color: #ffffff;
+  }
+
+  .product-image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+  }
+
+  .product-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #000000;
+    margin: 0 0 6px 0;
+    line-height: 1.4;
+    height: 40px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+
+  .product-price {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: #000000;
+    margin: 0;
+  }
+
+  @media (max-width: 1024px) {
+    .best-sellers-section {
+      padding: 40px 20px;
+    }
+    .best-sellers-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 15px;
+    }
+    .title-nav-wrapper {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 15px;
+      width: 100%;
+    }
+    .best-sellers-tabs {
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+  }
+</style>
+
+<div class="best-sellers-section">
+  <div class="best-sellers-header">
+    <div class="title-nav-wrapper">
+      <h2 class="best-sellers-title">Best Sellers</h2>
+      
+      <div class="best-sellers-tabs">
+        <a href="#" class="tab-link active">All</a>
+        <a href="#" class="tab-link">Body</a>
+        <a href="#" class="tab-link">Face</a>
+        <a href="#" class="tab-link">Eyes</a>
+        <a href="#" class="tab-link">Makeup</a>
+        <a href="#" class="tab-link">Lips</a>
+        <a href="#" class="tab-link">Skin</a>
+        <a href="#" class="tab-link">Hair</a>
+      </div>
+    </div>
+
+    <a href="#" class="view-all-link">View All →</a>
+  </div>
+
+  <div class="product-grid-container">
+    
+    <div class="product-card">
+      <div class="product-image-box">
+        <img src="{{ 'product1.png' | asset_url }}">
+      </div>
+      <h3 class="product-title">Johnny B Mode</h3>
+      <p class="product-price">$32.00</p>
+    </div>
+
+    <div class="product-card">
+      <div class="product-image-box">
+        <img src="{{ 'product2.png' | asset_url }}">
+      </div>
+      <h3 class="product-title">Omnilux Contour Face</h3>
+      <p class="product-price">$395.00</p>
+    </div>
+
+    <div class="product-card">
+      <div class="product-image-box">
+        <img src="{{ 'product3.png' | asset_url }}">
+      </div>
+      <h3 class="product-title">K18 Biomimetic AirWash Dry Shampoo</h3>
+      <p class="product-price">$48.00</p>
+    </div>
+
+    <div class="product-card">
+      <div class="product-image-box">
+        <img src="{{ 'product4.png' | asset_url }}">
+      </div>
+      <h3 class="product-title">TT K18 Biomimetic Leave-In Molecular Repair Hair Mask</h3>
+      <p class="product-price">$29.00</p>
+    </div>
+
+    <div class="product-card">
+      <div class="product-image-box">
+        <img src="{{ 'product5.png' | asset_url }}">
+      </div>
+      <h3 class="product-title">K18 Biomimetic AstroLift Reparative Volume Spray</h3>
+      <p class="product-price">$36.00</p>
+    </div>
+
+    <div class="product-card">
+      <div class="product-image-box">
+        <img src="{{ 'product6.png' | asset_url }}">
+      </div>
+      <h3 class="product-title">Olaplex No.7 Bonding Oil</h3>
+      <p class="product-price">$32.00</p>
+    </div>
+
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Best Sellers Collections",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Best Sellers Collections"
+    }
+  ]
+}
+{% endschema %}

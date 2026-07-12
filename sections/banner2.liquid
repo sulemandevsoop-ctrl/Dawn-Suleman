@@ -1,0 +1,126 @@
+<style>
+  .custom-banner-two-wrapper {
+    width: 100%;
+    background-color: #222222;
+  }
+
+  .custom-banner-two-inner {
+    width: 1439px;
+    max-width: 100%;
+    height: 700px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 100px;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+
+  .banner-two-image-container {
+    width: 565px;
+    height: 438px;
+    border-radius: 20px;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+
+  .banner-two-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .banner-two-text-container {
+    width: 623px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+    box-sizing: border-box;
+  }
+
+  .banner-two-heading {
+    font-family: 'Fraunces', serif;
+    font-size: 48px;
+    font-weight: 600;
+    color: #ffffff;
+    margin: 0;
+    line-height: 1.2;
+  }
+
+  .banner-two-subheading {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #e0e0e0;
+    margin: 0;
+    line-height: 1.6;
+    max-width: 500px;
+  }
+
+  .banner-two-btn {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #000000;
+    background-color: #ffffff;
+    text-decoration: none;
+    padding: 14px 40px;
+    border-radius: 30px;
+    display: inline-block;
+    margin-top: 10px;
+  }
+
+  @media (max-width: 1200px) {
+    .custom-banner-two-inner {
+      height: auto;
+      flex-direction: column;
+      padding: 60px 20px;
+      gap: 40px;
+    }
+
+    .banner-two-image-container {
+      width: 100%;
+      max-width: 565px;
+      height: 380px;
+    }
+
+    .banner-two-text-container {
+      width: 100%;
+      max-width: 623px;
+    }
+  }
+</style>
+
+<div class="custom-banner-two-wrapper">
+  <div class="custom-banner-two-inner">
+    
+    <div class="banner-two-image-container">
+      <img src="{{ 'banner2_image.png' | asset_url }}" alt="Beauty Routine">
+    </div>
+
+    <div class="banner-two-text-container">
+      <h2 class="banner-two-heading">Your beauty routine made simple</h2>
+      <p class="banner-two-subheading">
+        We're committed to making consciously crafted beauty essentials that are effortless and truly made for your everyday. Because beauty should be created with you in mind.
+      </p>
+      <a href="#" class="banner-two-btn">Build A Box</a>
+    </div>
+
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Banner Style Two",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Banner Style Two"
+    }
+  ]
+}
+{% endschema %}
